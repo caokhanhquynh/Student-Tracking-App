@@ -16,14 +16,17 @@
         </table>
         <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
             <h1>Student Tracking App</h1>
+            <h5>*Please click to the student to see their timetable</h5>
             <div th:each="student:${stu}">
                 <div style="margin-bottom: 20px;">
                     Student ID: <span th:text="${student.uid}"></span> <br>
+                    <a th:href="@{'/timetable/view?studentid=' + ${student.uid}}">
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <rect th:attr="width=${student.weight}, height=${student.height}*3, x=0, y=0" style="fill:white; stroke:black; stroke-width:3;"></rect>
                         <text th:attr="x=5, y=15, font-size=16, font-family=Arial, style='fill:' + ${student.hair}" th:text=${student.name}></text>
                         <text th:attr="x=5, y=30, font-size=16, font-family=Arial, style='fill:black'" th:text=${student.gpa}></text>
                     </svg>
+                    </a>
                     <br>
                 </div>
             </div>
