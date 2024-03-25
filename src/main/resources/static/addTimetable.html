@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Timetable Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <main class="container">
+        <h1>Add Student's Timetable</h1>
+        <form action="/timetable/add" method="post">
+            <div class="mb-3">
+                <label for="studentid" class="form-label">Student ID</label>
+                <input type="number" class="form-control" id="studentid" name="studentid" required>
+            </div>
+            <div class="mb-3">
+                <label for="dayofweek">Day</label>
+                <select name="dayofweek" id="dayofweek">
+                    <option value="none">Choose The Day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                </select required>
+            </div>
+            <div class="mb-3">
+                <label for="time">Time</label>
+                <select name="time" id="time">
+                    <option value="none">Choose The Time</option>
+                    <option value="I">8:30 - 10:00</option>
+                    <option value="II">10:00 - 11:30</option>
+                    <option value="III">12:00 - 13:30</option>
+                    <option value="IV">13:30 - 15:00</option>
+                    <option value="V">15:00 - 16:30</option>
+                </select required>
+            </div>
+            <div class="mb-3">
+                <label for="coursename">Course</label>
+                <select name="coursename" id="coursename">
+                    <option value="none">Choose The Course</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Pre-Calculus">Pre-Calculus</option>
+                    <option value="Caculus">Calculus</option>
+                    <option value="English">English</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Physical Education">Physical Education</option>
+                    <option value="History">History</option>
+                </select required>
+            </div>
+            <div class="d-grid gap-2">
+                <input class="btn btn-primary" type="submit" value="SEND">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
